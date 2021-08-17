@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+    server:
+        image: 'andrewe17/dockerfile-node6'
+        ports:
+            - '5000:5000'
+    db:
+        container_name: 'mongo'
+        image: 'mongo'
+        ports:
+            - '27017:27017'
+    frontend:
+        image: 'andrewe17/dockerfile-react4'
+        ports:
+            - '3000:3000'
+            
